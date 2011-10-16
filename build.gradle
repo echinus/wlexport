@@ -1,0 +1,18 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'java'
+
+repositories {
+  mavenCentral()
+}
+
+ideaProject {
+  javaVersion = "1.6"
+}
+
+dependencies {
+  groovy 'org.codehaus.groovy:groovy:1.8.2',
+          'commons-cli:commons-cli:1.2',
+          'net.sf.opencsv:opencsv:2.0'
+  testCompile 'org.testng:testng:6.2.1'
+}
